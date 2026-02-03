@@ -3,123 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Software</title>
+    <title>Compass3 - Your Software Solution</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Reset some default styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #f5f5f5;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        /* Main container for two columns */
-        .container {
-            display: flex;
-            max-width: 1200px;
-            margin: 20px auto;
-            gap: 40px;
-            padding: 0 20px;
-        }
-
-        /* Left column - main content */
-        .main {
-            flex: 3; /* takes more space */
-        }
-
-        .main section {
-            margin-bottom: 40px;
-        }
-
-        /* Right column - sidebar */
-        .sidebar {
-            flex: 1; /* smaller than main */
-            background-color: #f0f0f0;
-            padding: 20px;
-            border-radius: 10px;
-            height: fit-content;
-        }
-
-        .sidebar h2 {
-            margin-top: 0;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #f5f5f5;
-            margin-top: 40px;
-        }
-
-        /* Responsive */
-        @media (max-width: 900px) {
-            .container {
-                flex-direction: column;
-            }
-
-            .sidebar {
-                margin-top: 20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
-    <header>
-        <img src="images/logo.png" alt="Software Logo" width="150">
-        <h1>Welcome to My Software</h1>
-    </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="Compass3 Logo">
+                <span>Compass3</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#documentation">Docs</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://github.com/yourusername/compass3" class="github-btn" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a></li>
+            </ul>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
 
-    <div class="container">
-        <!-- Left column -->
-        <div class="main">
-            <section id="description">
-                <h2>About the Software</h2>
-                <p>Cpmpass3 is a rock mechanics and rock engineering software for rock slope assessment.</p>
-            </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Navigate Your Data with <span class="highlight">Compass3</span></h1>
+                <p class="subtitle">Powerful, intuitive software for data analysis and visualization</p>
+                <p>Compass3 is an open-source tool designed to help researchers, analysts, and developers process, analyze, and visualize complex datasets with ease.</p>
+                <div class="cta-buttons">
+                    <a href="#download" class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download Now
+                    </a>
+                    <a href="#features" class="btn btn-secondary">
+                        <i class="fas fa-play-circle"></i> Learn More
+                    </a>
+                </div>
+                <div class="version-info">
+                    <span class="version-badge">Latest v3.2.1</span>
+                    <span class="release-date">Released: October 2023</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/screenshot1.png" alt="Compass3 Interface">
+            </div>
+        </div>
+    </section>
 
-            <section id="demo">
-                <h2>Video Demo</h2>
-                <video width="100%" controls>
-                    <source src="videos/demo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </section>
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Choose Compass3?</h2>
+            <p class="section-subtitle">Explore the powerful features that make Compass3 the ideal choice for your data needs</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast Processing</h3>
+                    <p>Optimized algorithms for lightning-fast data processing and analysis.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Advanced Visualization</h3>
+                    <p>Create stunning, interactive visualizations with our built-in tools.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Extensible API</h3>
+                    <p>Extend functionality with plugins and custom scripts using our API.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure & Private</h3>
+                    <p>Your data stays on your machine. No cloud uploads required.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaborative Tools</h3>
+                    <p>Share projects and collaborate with team members seamlessly.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Auto Updates</h3>
+                    <p>Stay current with automatic updates and new features.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <section id="screenshots">
-                <h2>Screenshots</h2>
-                <img src="images/screenshot1.png" alt="Screenshot 1" width="100%">
-            </section>
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <h2>Get Compass3</h2>
+            <p class="section-subtitle">Available for all major platforms</p>
+            
+            <div class="download-options">
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <i class="fab fa-windows"></i>
+                    </div>
+                    <h3>Windows</h3>
+                    <p>Windows 10/11 (64-bit)</p>
+                    <a href="#" class="btn btn-download">
+                        <i class="fas fa-download"></i> Download .exe
+                    </a>
+                    <span class="file-size">≈ 85 MB</span>
+                </div>
+                
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <h3>macOS</h3>
+                    <p>macOS 11.0+ (Intel & Apple Silicon)</p>
+                    <a href="#" class="btn btn-download">
+                        <i class="fas fa-download"></i> Download .dmg
+                    </a>
+                    <span class="file-size">≈ 92 MB</span>
+                </div>
+                
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <i class="fab fa-linux"></i>
+                    </div>
+                    <h3>Linux</h3>
+                    <p>Debian, Ubuntu, Fedora</p>
+                    <a href="#" class="btn btn-download">
+                        <i class="fas fa-download"></i> Download .AppImage
+                    </a>
+                    <span class="file-size">≈ 88 MB</span>
+                </div>
+            </div>
+            
+            <div class="installation-info">
+                <h3>Installation Instructions</h3>
+                <div class="code-block">
+                    <pre><code># For Linux via terminal
+chmod +x Compass3-3.2.1.AppImage
+./Compass3-3.2.1.AppImage</code></pre>
+                </div>
+                <p class="note">Visit our <a href="#documentation">documentation</a> for detailed installation guides.</p>
+            </div>
+        </div>
+    </section>
 
-            <section id="download">
-                <h2>Download</h2>
-                <a href="downloads/MySoftwareSetup.exe" download>
-                    Download EXE
+    <!-- Documentation Section -->
+    <section id="documentation" class="documentation">
+        <div class="container">
+            <h2>Documentation & Resources</h2>
+            <div class="docs-grid">
+                <a href="#" class="doc-card">
+                    <i class="fas fa-book"></i>
+                    <h3>User Guide</h3>
+                    <p>Learn how to use Compass3 with our comprehensive guide.</p>
                 </a>
-            </section>
+                
+                <a href="#" class="doc-card">
+                    <i class="fas fa-video"></i>
+                    <h3>Tutorials</h3>
+                    <p>Video tutorials for beginners and advanced users.</p>
+                </a>
+                
+                <a href="#" class="doc-card">
+                    <i class="fas fa-code"></i>
+                    <h3>API Reference</h3>
+                    <p>Complete API documentation for developers.</p>
+                </a>
+                
+                <a href="https://github.com/yourusername/compass3" class="doc-card" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub Repository</h3>
+                    <p>View source code, report issues, or contribute.</p>
+                </a>
+            </div>
         </div>
+    </section>
 
-        <!-- Right column -->
-        <div class="sidebar">
-            <h2>About the Developer</h2>
-            <p>Mehdi Amini is a professional geotechnical engineer with over 20 years of experience in rock mechanics and rock slope assessment. He specializes in developing software solutions to improve safety and efficiency in rock engineering projects.</p>
-            <p>For inquiries, contact: <a href="mailto:mehdi@example.com">mehdi@example.com</a></p>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Get In Touch</h2>
+                <p>Have questions, suggestions, or need support? We're here to help!</p>
+                
+                <div class="contact-methods">
+                    <a href="https://github.com/yourusername/compass3/issues" class="contact-link" target="_blank">
+                        <i class="fas fa-bug"></i>
+                        <span>Report an Issue</span>
+                    </a>
+                    
+                    <a href="https://github.com/yourusername/compass3/discussions" class="contact-link" target="_blank">
+                        <i class="fas fa-comments"></i>
+                        <span>Community Discussions</span>
+                    </a>
+                    
+                    <a href="mailto:support@compass3.example.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email Support</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to get news about updates and new features.</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 My Software</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="Compass3 Logo">
+                    <span>Compass3</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#features">Features</a>
+                    <a href="#download">Download</a>
+                    <a href="#documentation">Documentation</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://github.com/yourusername/compass3" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Compass3 Project. Open source under MIT License.</p>
+                <p>Made with <i class="fas fa-heart"></i> by the Compass3 Team</p>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
