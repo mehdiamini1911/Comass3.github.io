@@ -152,6 +152,7 @@ p {
     padding: 1rem 20px;
 }
 
+/* Logo Styles - UPDATED */
 .logo {
     display: flex;
     align-items: center;
@@ -160,17 +161,15 @@ p {
     color: var(--text-color);
 }
 
-.logo-icon {
-    width: 40px;
+.logo-image {
     height: 40px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.2rem;
+    width: auto;
+    display: block;
+}
+
+/* Hide the old text-based logo */
+.logo-icon {
+    display: none;
 }
 
 .logo-text {
@@ -953,6 +952,17 @@ p {
     margin-bottom: 1.5rem;
 }
 
+/* Footer logo should also use the image */
+.footer-logo .logo-icon {
+    display: none; /* Hide in footer too */
+}
+
+.footer-logo .logo-image {
+    height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1); /* Makes logo white for dark footer */
+}
+
 .footer p {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.95rem;
@@ -1098,6 +1108,14 @@ p {
         font-size: 2rem;
     }
     
+    .logo-image {
+        height: 32px;
+    }
+    
+    .footer-logo .logo-image {
+        height: 32px;
+    }
+    
     .nav-links {
         display: none;
         position: absolute;
@@ -1152,4 +1170,3 @@ p {
     opacity: 1;
     transform: translateY(0);
 }
-
