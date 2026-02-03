@@ -152,7 +152,7 @@ p {
     padding: 1rem 20px;
 }
 
-/* Logo Styles - UPDATED with better handling */
+/* Logo Styles */
 .logo {
     display: flex;
     align-items: center;
@@ -347,64 +347,54 @@ p {
     margin-top: 2rem;
 }
 
-/* Stereonet Visualization */
-.stereonet-visual {
-    position: relative;
+/* Hero Section Visual - UPDATED with screenshot */
+.hero-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screenshot-container {
+    width: 100%;
+    max-width: 600px;
     background: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
 }
 
-.stereonet-circle {
-    width: 300px;
-    height: 300px;
-    border: 2px solid var(--border-color);
-    border-radius: 50%;
-    position: relative;
-    margin: 0 auto;
-    background: radial-gradient(circle at center, transparent 0%, transparent 50%, #f8f9fa 100%);
+.screenshot-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.stereonet-grid {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 90%;
-    height: 90%;
-    transform: translate(-50%, -50%);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
+.software-screenshot {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    display: block;
+    transition: var(--transition);
 }
 
-.joint-set {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 4px;
-    height: 120px;
-    background-color: var(--primary-color);
-    transform-origin: top center;
-    transform: translate(-50%, -50%) rotate(var(--angle));
+.software-screenshot:hover {
+    transform: scale(1.01);
 }
 
-.joint-set:before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 12px;
-    height: 12px;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-}
-
-.visual-label {
+.screenshot-caption {
     text-align: center;
     margin-top: 1rem;
-    font-weight: 600;
+    font-size: 0.9rem;
     color: var(--text-light);
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Remove the old stereonet-visual styles */
+.stereonet-visual {
+    display: none; /* Hide the old visual */
 }
 
 /* Introduction Section */
@@ -1114,6 +1104,16 @@ p {
         text-align: center;
     }
     
+    .hero-visual {
+        order: -1; /* Put screenshot above text on tablet */
+        margin-bottom: 3rem;
+    }
+    
+    .screenshot-container {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
     .docs-content,
     .contact-content {
         grid-template-columns: 1fr;
@@ -1146,6 +1146,16 @@ p {
     
     .footer-logo .logo-image {
         height: 32px;
+    }
+    
+    .screenshot-container {
+        padding: 1rem;
+        max-width: 100%;
+    }
+    
+    .software-screenshot {
+        max-height: 300px;
+        object-fit: contain;
     }
     
     .nav-links {
