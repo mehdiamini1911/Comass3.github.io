@@ -152,7 +152,7 @@ p {
     padding: 1rem 20px;
 }
 
-/* Logo Styles - UPDATED */
+/* Logo Styles - UPDATED with better handling */
 .logo {
     display: flex;
     align-items: center;
@@ -161,21 +161,51 @@ p {
     color: var(--text-color);
 }
 
-.logo-image {
+/* Logo image container for better control */
+.logo-image-container {
+    position: relative;
     height: 40px;
+    min-width: 40px; /* Ensures space is reserved even if image fails */
+}
+
+.logo-image {
+    height: 100%;
     width: auto;
+    max-width: 150px; /* Prevents logo from being too wide */
+    object-fit: contain;
     display: block;
 }
 
-/* Hide the old text-based logo */
-.logo-icon {
+/* Fallback logo style in case image doesn't load */
+.logo-fallback {
+    display: none; /* Hide by default */
+}
+
+/* Only show fallback if image fails to load */
+.logo-image[src*="Logo.png"]:not([src]), 
+.logo-image[src=""] {
     display: none;
+}
+
+.logo-image[src*="Logo.png"]:not([src]) + .logo-fallback,
+.logo-image[src=""] + .logo-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
 .logo-text {
     font-size: 1.5rem;
     font-weight: 700;
     display: block;
+    white-space: nowrap; /* Prevents text wrapping */
 }
 
 .logo-trademark {
@@ -952,15 +982,15 @@ p {
     margin-bottom: 1.5rem;
 }
 
-/* Footer logo should also use the image */
-.footer-logo .logo-icon {
-    display: none; /* Hide in footer too */
-}
-
+/* Footer logo - ensure image displays properly */
 .footer-logo .logo-image {
     height: 40px;
     width: auto;
     filter: brightness(0) invert(1); /* Makes logo white for dark footer */
+}
+
+.footer-logo .logo-fallback {
+    display: none; /* Hide fallback in footer by default */
 }
 
 .footer p {
@@ -1108,8 +1138,10 @@ p {
         font-size: 2rem;
     }
     
-    .logo-image {
+    /* Mobile logo adjustments */
+    .logo-image-container {
         height: 32px;
+        min-width: 32px;
     }
     
     .footer-logo .logo-image {
