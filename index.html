@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compass3 - Your Software Solution</title>
+    <title>Compass 3™ - Rock Mechanics Software for Kinematic Analysis</title>
+    <meta name="description" content="Professional stereonet-based rock mass characterization and kinematic analysis software for rock slopes. Developed by Dr. Mehdi Amini.">
+    <meta name="keywords" content="rock mechanics, stereonet, kinematic analysis, rock slopes, geotechnical engineering, Compass 3">
+    <meta name="author" content="Dr. Mehdi Amini, P.hD., P.Eng.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -13,18 +16,20 @@
     <nav class="navbar">
         <div class="container">
             <a href="#" class="logo">
-                <img src="assets/logo.png" alt="Compass3 Logo">
-                <span>Compass3</span>
+                <div class="logo-icon">C3</div>
+                <div>
+                    <span class="logo-text">Compass 3</span>
+                    <span class="logo-trademark">™</span>
+                </div>
             </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#features">Features</a></li>
+                <li><a href="#applications">Applications</a></li>
+                <li><a href="#documentation">Documentation</a></li>
                 <li><a href="#download">Download</a></li>
-                <li><a href="#documentation">Docs</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="https://github.com/yourusername/compass3" class="github-btn" target="_blank">
-                    <i class="fab fa-github"></i> GitHub
-                </a></li>
+                <li><a href="#pricing" class="btn btn-outline">Get License</a></li>
             </ul>
             <button class="menu-toggle">
                 <i class="fas fa-bars"></i>
@@ -36,24 +41,71 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Navigate Your Data with <span class="highlight">Compass3</span></h1>
-                <p class="subtitle">Powerful, intuitive software for stereonet analysis and visualization</p>
-                <p>Compass3 is a software designed to help researchers, analysts, and developers process, analyze, and visualize complex datasets with ease.</p>
+                <div class="version-badge">Version 1.0.0</div>
+                <h1>Compass 3<span class="trademark">™</span></h1>
+                <p class="subtitle">Advanced Rock Mechanics Software for Kinematic Analysis</p>
+                <p class="hero-description">Professional stereonet-based software for rock mass characterization and kinematic analysis of rock slopes. Developed specifically for geotechnical engineers and rock mechanics professionals.</p>
+                <div class="author-info">
+                    <div class="author-title">Author:</div>
+                    <div class="author-name">Dr. Mehdi Amini, P.hD., P.Eng.</div>
+                </div>
+                <div class="date-info">January 2026</div>
                 <div class="cta-buttons">
                     <a href="#download" class="btn btn-primary">
-                        <i class="fas fa-download"></i> Download Now
+                        <i class="fas fa-download"></i> Download Free Trial
                     </a>
-                    <a href="#features" class="btn btn-secondary">
-                        <i class="fas fa-play-circle"></i> Learn More
+                    <a href="#documentation" class="btn btn-secondary">
+                        <i class="fas fa-book"></i> View User Guide
                     </a>
-                </div>
-                <div class="version-info">
-                    <span class="version-badge">Latest v3.2.1</span>
-                    <span class="release-date">Released: October 2023</span>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="assets/screenshot1.png" alt="Compass3 Interface">
+            <div class="hero-visual">
+                <div class="stereonet-visual">
+                    <div class="stereonet-circle">
+                        <div class="stereonet-grid"></div>
+                        <div class="joint-set" style="--angle: 30deg"></div>
+                        <div class="joint-set" style="--angle: 120deg"></div>
+                        <div class="joint-set" style="--angle: 210deg"></div>
+                        <div class="joint-set" style="--angle: 300deg"></div>
+                    </div>
+                    <div class="visual-label">Stereonet Visualization</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="introduction">
+        <div class="container">
+            <h2><i class="fas fa-info-circle"></i> Introduction</h2>
+            <div class="section-content">
+                <p>Compass 3™ is a sophisticated software package designed for <strong>stereonet-based rock mass characterization</strong> and <strong>kinematic analysis of rock slopes</strong>. Developed by Dr. Mehdi Amini, this professional tool enables geotechnical engineers and rock mechanics professionals to efficiently analyze rock slope stability through comprehensive discontinuity analysis.</p>
+                
+                <div class="feature-highlight">
+                    <h3><i class="fas fa-bullseye"></i> Primary Functions</h3>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-file-import"></i>
+                            <h4>Data Import</h4>
+                            <p>Import joint orientation data from various formats</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <h4>Visualization</h4>
+                            <p>Visualize discontinuities on stereonets</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-mountain"></i>
+                            <h4>Slope Definition</h4>
+                            <p>Define slope face and excavation geometries</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h4>Failure Analysis</h4>
+                            <p>Perform kinematic failure mode analysis</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -61,56 +113,259 @@
     <!-- Features Section -->
     <section id="features" class="features">
         <div class="container">
-            <h2>Why Choose Compass3?</h2>
-            <p class="section-subtitle">Explore the powerful features that make Compass3 the ideal choice for your data needs</p>
+            <h2><i class="fas fa-star"></i> Key Features</h2>
+            <div class="features-grid detailed">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Joint Data Management</h3>
+                    <ul>
+                        <li>Import from CSV, Excel, and text files</li>
+                        <li>Automatic data validation</li>
+                        <li>Statistical analysis of discontinuity sets</li>
+                        <li>Clustering and set identification</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Stereonet Analysis</h3>
+                    <ul>
+                        <li>Equal area (Schmidt) and equal angle projections</li>
+                        <li>Contouring of pole densities</li>
+                        <li>Mean set orientation calculation</li>
+                        <li>Friction cone visualization</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3>Kinematic Analysis</h3>
+                    <ul>
+                        <li><strong>Planar failure</strong> analysis</li>
+                        <li><strong>Wedge failure</strong> analysis</li>
+                        <li><strong>Toppling failure</strong> analysis</li>
+                        <li>Factor of safety calculations</li>
+                        <li>Probabilistic analysis options</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Slope Geometry</h3>
+                    <ul>
+                        <li>Multiple slope face definition</li>
+                        <li>Bench and berm configuration</li>
+                        <li>Tension crack incorporation</li>
+                        <li>Groundwater table definition</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Reporting & Export</h3>
+                    <ul>
+                        <li>Professional report generation</li>
+                        <li>Export to PDF and Word formats</li>
+                        <li>High-resolution image export</li>
+                        <li>Data export for further analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Advanced Tools</h3>
+                    <ul>
+                        <li>Batch processing capabilities</li>
+                        <li>Scripting interface for automation</li>
+                        <li>Custom failure criteria</li>
+                        <li>Sensitivity analysis tools</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section id="applications" class="applications">
+        <div class="container">
+            <h2><i class="fas fa-industry"></i> Engineering Applications</h2>
+            <div class="applications-grid">
+                <div class="application-card">
+                    <div class="app-icon mining">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Mining Engineering</h3>
+                    <ul>
+                        <li>Open pit slope design</li>
+                        <li>Underground excavation stability</li>
+                        <li>Bench face optimization</li>
+                        <li>Rock bolt and support design</li>
+                    </ul>
+                </div>
+                
+                <div class="application-card">
+                    <div class="app-icon civil">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3>Civil Engineering</h3>
+                    <ul>
+                        <li>Highway cut slope analysis</li>
+                        <li>Dam foundation assessment</li>
+                        <li>Tunnel portal stability</li>
+                        <li>Foundation excavation design</li>
+                    </ul>
+                </div>
+                
+                <div class="application-card">
+                    <div class="app-icon geological">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>Geological Engineering</h3>
+                    <ul>
+                        <li>Rock mass characterization</li>
+                        <li>Discontinuity set analysis</li>
+                        <li>Rock quality assessment</li>
+                        <li>Field data interpretation</li>
+                    </ul>
+                </div>
+                
+                <div class="application-card">
+                    <div class="app-icon research">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Research & Academia</h3>
+                    <ul>
+                        <li>Teaching stereonet principles</li>
+                        <li>Research data analysis</li>
+                        <li>Methodology development</li>
+                        <li>Case study preparation</li>
+                    </ul>
+                </div>
+            </div>
             
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
+            <div class="standards-compliance">
+                <h3><i class="fas fa-certificate"></i> Industry Standards Compliance</h3>
+                <div class="standards-list">
+                    <span class="standard-badge">ISRM</span>
+                    <span class="standard-badge">ASTM</span>
+                    <span class="standard-badge">EAEG</span>
+                    <span class="standard-badge">NATM</span>
+                    <span class="standard-badge">FHWA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="documentation" class="documentation">
+        <div class="container">
+            <h2><i class="fas fa-book"></i> Documentation & Resources</h2>
+            <div class="docs-content">
+                <div class="user-guide-card">
+                    <div class="guide-header">
+                        <i class="fas fa-file-pdf"></i>
+                        <h3>Compass 3™ User Guide</h3>
                     </div>
-                    <h3>Fast Processing</h3>
-                    <p>Optimized algorithms for lightning-fast data processing and analysis.</p>
+                    <div class="guide-info">
+                        <div class="info-item">
+                            <strong>Version:</strong> 1.0.0
+                        </div>
+                        <div class="info-item">
+                            <strong>Prepared for:</strong> Rock Mechanics Engineering Applications
+                        </div>
+                        <div class="info-item">
+                            <strong>Author:</strong> Dr. Mehdi Amini, P.hD., P.Eng.
+                        </div>
+                        <div class="info-item">
+                            <strong>Date:</strong> January 2026
+                        </div>
+                    </div>
+                    
+                    <div class="guide-chapters">
+                        <h4>Table of Contents</h4>
+                        <ol class="chapters-list">
+                            <li><strong>Introduction</strong> - Software Overview and Capabilities</li>
+                            <li><strong>Installation</strong> - System Requirements and Setup</li>
+                            <li><strong>Getting Started</strong> - Interface Tour and Basic Operations</li>
+                            <li><strong>Data Import</strong> - Loading and Preparing Joint Data</li>
+                            <li><strong>Stereonet Analysis</strong> - Visualization Techniques</li>
+                            <li><strong>Kinematic Analysis</strong> - Failure Mode Assessment</li>
+                            <li><strong>Slope Geometry</strong> - Defining Slope Parameters</li>
+                            <li><strong>Analysis Results</strong> - Interpretation and Reporting</li>
+                            <li><strong>Advanced Features</strong> - Specialized Tools and Options</li>
+                            <li><strong>Troubleshooting</strong> - Common Issues and Solutions</li>
+                            <li><strong>Appendices</strong> - References and Additional Resources</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="guide-actions">
+                        <a href="assets/documentation/Compass3-User-Guide.pdf" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-download"></i> Download Full User Guide (PDF)
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            <i class="fas fa-play-circle"></i> Watch Tutorial Videos
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
+                <div class="resources-sidebar">
+                    <h3>Additional Resources</h3>
+                    <div class="resource-links">
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-video"></i>
+                            <div>
+                                <h4>Video Tutorials</h4>
+                                <p>Step-by-step demonstration videos</p>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-file-code"></i>
+                            <div>
+                                <h4>Sample Datasets</h4>
+                                <p>Practice with example projects</p>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-question-circle"></i>
+                            <div>
+                                <h4>FAQ</h4>
+                                <p>Frequently asked questions</p>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Training Workshops</h4>
+                                <p>Professional training sessions</p>
+                            </div>
+                        </a>
                     </div>
-                    <h3>Advanced Visualization</h3>
-                    <p>Create stunning, interactive visualizations with our built-in tools.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-code"></i>
+                    
+                    <div class="system-requirements">
+                        <h3>System Requirements</h3>
+                        <ul>
+                            <li><strong>OS:</strong> Windows 10/11 (64-bit), macOS 11.0+, Linux</li>
+                            <li><strong>Processor:</strong> 2.0 GHz or faster</li>
+                            <li><strong>Memory:</strong> 8 GB RAM minimum</li>
+                            <li><strong>Storage:</strong> 500 MB available space</li>
+                            <li><strong>Display:</strong> 1280x720 minimum resolution</li>
+                        </ul>
                     </div>
-                    <h3>Extensible API</h3>
-                    <p>Extend functionality with plugins and custom scripts using our API.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Secure & Private</h3>
-                    <p>Your data stays on your machine. No cloud uploads required.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Collaborative Tools</h3>
-                    <p>Share projects and collaborate with team members seamlessly.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <h3>Auto Updates</h3>
-                    <p>Stay current with automatic updates and new features.</p>
                 </div>
             </div>
         </div>
@@ -119,87 +374,92 @@
     <!-- Download Section -->
     <section id="download" class="download">
         <div class="container">
-            <h2>Get Compass3</h2>
-            <p class="section-subtitle">Available for all major platforms</p>
-            
+            <h2><i class="fas fa-download"></i> Download Compass 3™</h2>
             <div class="download-options">
-                <div class="platform-card">
-                    <div class="platform-icon">
-                        <i class="fab fa-windows"></i>
+                <div class="trial-card">
+                    <div class="trial-header">
+                        <h3>Free Trial Version</h3>
+                        <span class="trial-badge">30 Days</span>
                     </div>
-                    <h3>Windows</h3>
-                    <p>Windows 10/11 (64-bit)</p>
-                    <a href="#" class="btn btn-download">
-                        <i class="fas fa-download"></i> Download .exe
-                    </a>
-                    <span class="file-size">≈ 85 MB</span>
-                </div>
-                
-                <div class="platform-card">
-                    <div class="platform-icon">
-                        <i class="fab fa-apple"></i>
+                    <p>Experience full functionality for 30 days with all features enabled.</p>
+                    <ul class="trial-features">
+                        <li><i class="fas fa-check"></i> All analysis capabilities</li>
+                        <li><i class="fas fa-check"></i> Full data import/export</li>
+                        <li><i class="fas fa-check"></i> Professional reporting</li>
+                        <li><i class="fas fa-check"></i> Technical support included</li>
+                    </ul>
+                    
+                    <div class="platform-downloads">
+                        <div class="platform-option">
+                            <i class="fab fa-windows"></i>
+                            <div>
+                                <strong>Windows</strong>
+                                <small>Compass3_Setup_1.0.0.exe (85 MB)</small>
+                            </div>
+                            <a href="#" class="btn btn-small">Download</a>
+                        </div>
+                        
+                        <div class="platform-option">
+                            <i class="fab fa-apple"></i>
+                            <div>
+                                <strong>macOS</strong>
+                                <small>Compass3_1.0.0.dmg (92 MB)</small>
+                            </div>
+                            <a href="#" class="btn btn-small">Download</a>
+                        </div>
+                        
+                        <div class="platform-option">
+                            <i class="fab fa-linux"></i>
+                            <div>
+                                <strong>Linux</strong>
+                                <small>Compass3_1.0.0.AppImage (88 MB)</small>
+                            </div>
+                            <a href="#" class="btn btn-small">Download</a>
+                        </div>
                     </div>
-                    <h3>macOS</h3>
-                    <p>macOS 11.0+ (Intel & Apple Silicon)</p>
-                    <a href="#" class="btn btn-download">
-                        <i class="fas fa-download"></i> Download .dmg
-                    </a>
-                    <span class="file-size">≈ 92 MB</span>
                 </div>
                 
-                <div class="platform-card">
-                    <div class="platform-icon">
-                        <i class="fab fa-linux"></i>
+                <div class="license-info">
+                    <h3>Licensing Options</h3>
+                    <div class="license-cards">
+                        <div class="license-card">
+                            <h4>Academic License</h4>
+                            <div class="license-price">$495<span>/year</span></div>
+                            <ul>
+                                <li>For educational institutions</li>
+                                <li>Unlimited installations</li>
+                                <li>Academic support</li>
+                                <li>Teaching materials</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline">Request Quote</a>
+                        </div>
+                        
+                        <div class="license-card featured">
+                            <div class="featured-badge">Most Popular</div>
+                            <h4>Professional License</h4>
+                            <div class="license-price">$1,995<span>/perpetual</span></div>
+                            <ul>
+                                <li>Commercial use</li>
+                                <li>Priority support</li>
+                                <li>Updates for 1 year</li>
+                                <li>Training webinar</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary">Purchase Now</a>
+                        </div>
+                        
+                        <div class="license-card">
+                            <h4>Enterprise License</h4>
+                            <div class="license-price">Custom</div>
+                            <ul>
+                                <li>Multiple users</li>
+                                <li>Site licensing</li>
+                                <li>Custom development</li>
+                                <li>Dedicated support</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline">Contact Sales</a>
+                        </div>
                     </div>
-                    <h3>Linux</h3>
-                    <p>Debian, Ubuntu, Fedora</p>
-                    <a href="#" class="btn btn-download">
-                        <i class="fas fa-download"></i> Download .AppImage
-                    </a>
-                    <span class="file-size">≈ 88 MB</span>
                 </div>
-            </div>
-            
-            <div class="installation-info">
-                <h3>Installation Instructions</h3>
-                <div class="code-block">
-                    <pre><code># For Linux via terminal
-chmod +x Compass3-3.2.1.AppImage
-./Compass3-3.2.1.AppImage</code></pre>
-                </div>
-                <p class="note">Visit our <a href="#documentation">documentation</a> for detailed installation guides.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Documentation Section -->
-    <section id="documentation" class="documentation">
-        <div class="container">
-            <h2>Documentation & Resources</h2>
-            <div class="docs-grid">
-                <a href="#" class="doc-card">
-                    <i class="fas fa-book"></i>
-                    <h3>User Guide</h3>
-                    <p>Learn how to use Compass3 with our comprehensive guide.</p>
-                </a>
-                
-                <a href="#" class="doc-card">
-                    <i class="fas fa-video"></i>
-                    <h3>Tutorials</h3>
-                    <p>Video tutorials for beginners and advanced users.</p>
-                </a>
-                
-                <a href="#" class="doc-card">
-                    <i class="fas fa-code"></i>
-                    <h3>API Reference</h3>
-                    <p>Complete API documentation for developers.</p>
-                </a>
-                
-                <a href="https://github.com/yourusername/compass3" class="doc-card" target="_blank">
-                    <i class="fab fa-github"></i>
-                    <h3>GitHub Repository</h3>
-                    <p>View source code, report issues, or contribute.</p>
-                </a>
             </div>
         </div>
     </section>
@@ -207,35 +467,83 @@ chmod +x Compass3-3.2.1.AppImage
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
+            <h2><i class="fas fa-envelope"></i> Contact & Support</h2>
             <div class="contact-content">
-                <h2>Get In Touch</h2>
-                <p>Have questions, suggestions, or need support? We're here to help!</p>
-                
-                <div class="contact-methods">
-                    <a href="https://github.com/yourusername/compass3/issues" class="contact-link" target="_blank">
-                        <i class="fas fa-bug"></i>
-                        <span>Report an Issue</span>
-                    </a>
+                <div class="contact-info">
+                    <h3>Technical Support & Sales</h3>
+                    <p>For technical support, licensing inquiries, or custom solutions:</p>
                     
-                    <a href="https://github.com/yourusername/compass3/discussions" class="contact-link" target="_blank">
-                        <i class="fas fa-comments"></i>
-                        <span>Community Discussions</span>
-                    </a>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Support</h4>
+                                <a href="mailto:support@compass3-software.com">support@compass3-software.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone Support</h4>
+                                <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <h4>Consultation</h4>
+                                <a href="#">Schedule a demo session</a>
+                            </div>
+                        </div>
+                    </div>
                     
-                    <a href="mailto:support@compass3.example.com" class="contact-link">
-                        <i class="fas fa-envelope"></i>
-                        <span>Email Support</span>
-                    </a>
+                    <div class="support-hours">
+                        <h4>Support Hours</h4>
+                        <p>Monday - Friday: 9:00 AM - 5:00 PM (EST)</p>
+                        <p>Emergency support available for enterprise clients</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="newsletter">
-                <h3>Stay Updated</h3>
-                <p>Subscribe to get news about updates and new features.</p>
-                <form id="newsletter-form">
-                    <input type="email" placeholder="Your email address" required>
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
-                </form>
+                
+                <div class="contact-form-container">
+                    <h3>Send a Message</h3>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select required>
+                                <option value="" disabled selected>Select Inquiry Type</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="sales">Sales Inquiry</option>
+                                <option value="academic">Academic Licensing</option>
+                                <option value="training">Training Request</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox">
+                                <input type="checkbox" required>
+                                <span>I agree to the terms and privacy policy</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -244,37 +552,73 @@ chmod +x Compass3-3.2.1.AppImage
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="assets/logo.png" alt="Compass3 Logo">
-                    <span>Compass3</span>
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon">C3</div>
+                        <div>
+                            <span class="logo-text">Compass 3</span>
+                            <span class="logo-trademark">™</span>
+                        </div>
+                    </div>
+                    <p>Professional rock mechanics software for kinematic analysis and stereonet-based rock mass characterization.</p>
+                    <p>© 2026 Compass 3™ Software. All rights reserved.</p>
                 </div>
                 
                 <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#features">Features</a>
-                    <a href="#download">Download</a>
-                    <a href="#documentation">Documentation</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Use</a>
+                    <div class="link-group">
+                        <h4>Software</h4>
+                        <a href="#features">Features</a>
+                        <a href="#applications">Applications</a>
+                        <a href="#download">Download</a>
+                        <a href="#pricing">Pricing</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Resources</h4>
+                        <a href="#documentation">Documentation</a>
+                        <a href="#">Tutorials</a>
+                        <a href="#">Case Studies</a>
+                        <a href="#">Research Papers</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="#contact">Contact</a>
+                        <a href="#">About</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
                 </div>
                 
                 <div class="footer-social">
-                    <a href="https://github.com/yourusername/compass3" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" target="_blank">
-                        <i class="fab fa-discord"></i>
-                    </a>
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                    
+                    <div class="footer-newsletter">
+                        <h4>Stay Updated</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter your email">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2023 Compass3 Project. Open source under MIT License.</p>
-                <p>Made with <i class="fas fa-heart"></i> by the Compass3 Team</p>
+                <div class="disclaimer">
+                    <p><strong>Disclaimer:</strong> Compass 3™ is intended for professional use by qualified geotechnical engineers and rock mechanics professionals. Users are responsible for verifying the suitability of the software for their specific applications and for validating analysis results.</p>
+                </div>
+                
+                <div class="certifications">
+                    <span>Developed by: Dr. Mehdi Amini, P.hD., P.Eng.</span>
+                    <span>ISO 9001:2015 Compliant</span>
+                    <span>Professional Engineering Software</span>
+                </div>
             </div>
         </div>
     </footer>
@@ -282,4 +626,3 @@ chmod +x Compass3-3.2.1.AppImage
     <script src="script.js"></script>
 </body>
 </html>
-
