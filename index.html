@@ -5,37 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Software</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset some default styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f5f5f5;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Main container for two columns */
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        /* Left column - main content */
+        .main {
+            flex: 3; /* takes more space */
+        }
+
+        .main section {
+            margin-bottom: 40px;
+        }
+
+        /* Right column - sidebar */
+        .sidebar {
+            flex: 1; /* smaller than main */
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            height: fit-content;
+        }
+
+        .sidebar h2 {
+            margin-top: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                margin-top: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Software Logo" width="150">
+        <img src="images/logo.png" alt="Software Logo" width="150">
         <h1>Welcome to My Software</h1>
     </header>
 
-    <section id="description">
-        <h2>About the Software</h2>
-        <p>Cpmpass3 is a rock mechanics and rock engineering software to rock slope assessment</p>
-    </section>
+    <div class="container">
+        <!-- Left column -->
+        <div class="main">
+            <section id="description">
+                <h2>About the Software</h2>
+                <p>Cpmpass3 is a rock mechanics and rock engineering software for rock slope assessment.</p>
+            </section>
 
-    <section id="demo">
-        <h2>Video Demo</h2>
-        <video width="600" controls>
-            <source src="videos/demo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </section>
+            <section id="demo">
+                <h2>Video Demo</h2>
+                <video width="100%" controls>
+                    <source src="videos/demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
 
-    <section id="screenshots">
-        <h2>Screenshots</h2>
-        <img src="images/screenshot1.png" alt="Screenshot 1" width="400">
-    </section>
+            <section id="screenshots">
+                <h2>Screenshots</h2>
+                <img src="images/screenshot1.png" alt="Screenshot 1" width="100%">
+            </section>
 
-    <section id="download">
-        <h2>Download</h2>
-        <a href="downloads/MySoftwareSetup.exe" download>
-            Download EXE
-        </a>
-    </section>
+            <section id="download">
+                <h2>Download</h2>
+                <a href="downloads/MySoftwareSetup.exe" download>
+                    Download EXE
+                </a>
+            </section>
+        </div>
+
+        <!-- Right column -->
+        <div class="sidebar">
+            <h2>About the Developer</h2>
+            <p>Mehdi Amini is a professional geotechnical engineer with over 20 years of experience in rock mechanics and rock slope assessment. He specializes in developing software solutions to improve safety and efficiency in rock engineering projects.</p>
+            <p>For inquiries, contact: <a href="mailto:mehdi@example.com">mehdi@example.com</a></p>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2026 My Software</p>
@@ -44,4 +125,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
