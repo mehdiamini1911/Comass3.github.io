@@ -266,9 +266,57 @@ p {
     margin-bottom: 1.5rem;
 }
 
+/* Hero Section - Add these styles after the existing hero styles */
+
 .hero h1 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
+}
+
+.hero-logo {
+    height: 1em; /* This matches the font height */
+    width: auto; /* Maintains aspect ratio */
+    display: inline-block;
+    vertical-align: middle;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* For better control, you might want to specify exact height */
+.hero-logo {
+    height: 60px; /* Approximately matches your 3.5rem font size */
+    width: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .hero-logo {
+        height: 1.2em; /* Slightly larger on mobile for better visibility */
+    }
+    
+    /* Alternative fixed height for mobile */
+    .hero-logo {
+        height: 45px;
+    }
+}
+
+/* If you want the logo to animate with the text */
+.hero-logo {
+    transition: var(--transition);
+}
+
+.hero-logo:hover {
+    transform: scale(1.05);
 }
 
 .trademark {
@@ -1164,6 +1212,7 @@ p {
     opacity: 1;
     transform: translateY(0);
 }
+
 
 
 
