@@ -246,7 +246,8 @@ p {
     background: linear-gradient(135deg, transparent 0%, rgba(26, 95, 180, 0.05) 100%);
 }
 
-.hero .container {
+/* Hero Grid Layout */
+.hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -266,8 +267,6 @@ p {
     margin-bottom: 1.5rem;
 }
 
-/* Hero Section - Add these styles after the existing hero styles */
-
 .hero h1 {
     display: flex;
     align-items: center;
@@ -278,40 +277,11 @@ p {
 }
 
 .hero-logo {
-    height: 1em; /* This matches the font height */
-    width: auto; /* Maintains aspect ratio */
+    height: 60px;
+    width: auto;
     display: inline-block;
     vertical-align: middle;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-}
-
-/* For better control, you might want to specify exact height */
-.hero-logo {
-    height: 60px; /* Approximately matches your 3.5rem font size */
-    width: auto;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-        justify-content: center;
-        text-align: center;
-        gap: 10px;
-    }
-    
-    .hero-logo {
-        height: 1.2em; /* Slightly larger on mobile for better visibility */
-    }
-    
-    /* Alternative fixed height for mobile */
-    .hero-logo {
-        height: 45px;
-    }
-}
-
-/* If you want the logo to animate with the text */
-.hero-logo {
     transition: var(--transition);
 }
 
@@ -366,6 +336,60 @@ p {
     margin-top: 2rem;
 }
 
+/* Hero Visual/Screenshot Container */
+.hero-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screenshot-container {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.screenshot-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.software-screenshot {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+}
+
+.software-screenshot:hover {
+    transform: scale(1.01);
+}
+
+.screenshot-caption {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-weight: 500;
+    padding: 8px 15px;
+    background-color: rgba(26, 95, 180, 0.05);
+    border-radius: 6px;
+    width: 100%;
+}
+
 /* Stereonet Visualization */
 .stereonet-visual {
     background: #ffffff;
@@ -375,7 +399,6 @@ p {
     width: 100%;
     max-width: 520px;
     height: 320px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -384,9 +407,10 @@ p {
 .stereonet-visual img {
     width: 100%;
     height: 100%;
-    object-fit: contain;   /* shows full screenshot */
+    object-fit: contain;
     border-radius: 10px;
 }
+
 .stereonet-circle {
     width: 300px;
     height: 300px;
@@ -1129,9 +1153,19 @@ p {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .hero .container {
+    .hero-grid {
         grid-template-columns: 1fr;
+        gap: 3rem;
         text-align: center;
+    }
+    
+    .hero .container {
+        display: block;
+    }
+    
+    .screenshot-container {
+        max-width: 600px;
+        margin: 0 auto;
     }
     
     .docs-content,
@@ -1199,6 +1233,29 @@ p {
         text-align: center;
         gap: 0.5rem;
     }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .hero-logo {
+        height: 45px;
+    }
+    
+    .hero-grid {
+        gap: 2rem;
+    }
+    
+    .screenshot-container {
+        padding: 15px;
+    }
+    
+    .software-screenshot {
+        border-radius: 8px;
+    }
 }
 
 /* Animation for scroll reveal */
@@ -1213,7 +1270,18 @@ p {
     transform: translateY(0);
 }
 
+/* Screenshot fade-in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-
-
-
+.screenshot-container {
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+}
