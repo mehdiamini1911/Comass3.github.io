@@ -152,7 +152,6 @@ p {
     padding: 1rem 20px;
 }
 
-/* Logo Styles */
 .logo {
     display: flex;
     align-items: center;
@@ -161,42 +160,15 @@ p {
     color: var(--text-color);
 }
 
-/* Logo image container for better control */
-.logo-image-container {
-    position: relative;
-    height: 40px;
-    min-width: 40px; /* Ensures space is reserved even if image fails */
-}
-
-.logo-image {
-    height: 100%;
-    width: auto;
-    max-width: 150px; /* Prevents logo from being too wide */
-    object-fit: contain;
-    display: block;
-}
-
-/* Fallback logo style in case image doesn't load */
-.logo-fallback {
-    display: none; /* Hide by default */
-}
-
-/* Only show fallback if image fails to load */
-.logo-image[src*="Logo.png"]:not([src]), 
-.logo-image[src=""] {
-    display: none;
-}
-
-.logo-image[src*="Logo.png"]:not([src]) + .logo-fallback,
-.logo-image[src=""] + .logo-fallback {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.logo-icon {
     width: 40px;
     height: 40px;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
     border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 700;
     font-size: 1.2rem;
 }
@@ -205,7 +177,6 @@ p {
     font-size: 1.5rem;
     font-weight: 700;
     display: block;
-    white-space: nowrap; /* Prevents text wrapping */
 }
 
 .logo-trademark {
@@ -257,38 +228,42 @@ p {
     color: var(--text-color);
 }
 
-/* Hero Section Visual - FIX for screenshot display */
-.hero-visual {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.screenshot-container {
-    width: 100%;
-    max-width: 600px;
-    background: white;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-    border: 1px solid var(--border-color);
+/* Hero Section */
+.hero {
+    padding-top: 140px;
+    background: linear-gradient(135deg, #f0f7ff 0%, #e6f3ff 100%);
+    position: relative;
     overflow: hidden;
 }
 
-.software-screenshot {
-    width: 100%;
-    height: 400px; /* Fixed height or use auto */
-    object-fit: contain; /* Ensures image fits nicely */
-    display: block;
+.hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(26, 95, 180, 0.05) 100%);
 }
 
-.screenshot-caption {
-    text-align: center;
-    padding: 1rem;
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.version-badge {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
     font-size: 0.9rem;
-    color: var(--text-light);
-    font-weight: 500;
-    background: white;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
 }
 
 .hero h1 {
@@ -343,54 +318,64 @@ p {
     margin-top: 2rem;
 }
 
-/* Hero Section Visual - UPDATED with screenshot */
-.hero-visual {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.screenshot-container {
-    width: 100%;
-    max-width: 600px;
+/* Stereonet Visualization */
+.stereonet-visual {
+    position: relative;
     background: white;
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
-    border: 1px solid var(--border-color);
-    transition: var(--transition);
 }
 
-.screenshot-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+.stereonet-circle {
+    width: 300px;
+    height: 300px;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    background: radial-gradient(circle at center, transparent 0%, transparent 50%, #f8f9fa 100%);
 }
 
-.software-screenshot {
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius);
-    border: 1px solid var(--border-color);
-    display: block;
-    transition: var(--transition);
+.stereonet-grid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
 }
 
-.software-screenshot:hover {
-    transform: scale(1.01);
+.joint-set {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 120px;
+    background-color: var(--primary-color);
+    transform-origin: top center;
+    transform: translate(-50%, -50%) rotate(var(--angle));
 }
 
-.screenshot-caption {
+.joint-set:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.visual-label {
     text-align: center;
     margin-top: 1rem;
-    font-size: 0.9rem;
+    font-weight: 600;
     color: var(--text-light);
-    font-weight: 500;
-    font-style: italic;
-}
-
-/* Remove the old stereonet-visual styles */
-.stereonet-visual {
-    display: none; /* Hide the old visual */
 }
 
 /* Introduction Section */
@@ -968,17 +953,6 @@ p {
     margin-bottom: 1.5rem;
 }
 
-/* Footer logo - ensure image displays properly */
-.footer-logo .logo-image {
-    height: 40px;
-    width: auto;
-    filter: brightness(0) invert(1); /* Makes logo white for dark footer */
-}
-
-.footer-logo .logo-fallback {
-    display: none; /* Hide fallback in footer by default */
-}
-
 .footer p {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.95rem;
@@ -1100,16 +1074,6 @@ p {
         text-align: center;
     }
     
-    .hero-visual {
-        order: -1; /* Put screenshot above text on tablet */
-        margin-bottom: 3rem;
-    }
-    
-    .screenshot-container {
-        max-width: 500px;
-        margin: 0 auto;
-    }
-    
     .docs-content,
     .contact-content {
         grid-template-columns: 1fr;
@@ -1132,26 +1096,6 @@ p {
     
     h2 {
         font-size: 2rem;
-    }
-    
-    /* Mobile logo adjustments */
-    .logo-image-container {
-        height: 32px;
-        min-width: 32px;
-    }
-    
-    .footer-logo .logo-image {
-        height: 32px;
-    }
-    
-    .screenshot-container {
-        padding: 1rem;
-        max-width: 100%;
-    }
-    
-    .software-screenshot {
-        max-height: 300px;
-        object-fit: contain;
     }
     
     .nav-links {
