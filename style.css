@@ -319,25 +319,43 @@ p {
 }
 
 /* Stereonet Visualization */
+/* Stereonet Visualization - Larger size */
 .stereonet-visual {
     background: #ffffff;
     border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-    padding: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    padding: 20px; /* Increased padding */
     width: 100%;
-    max-width: 520px;
-    height: 320px;
-
+    max-width: 750px; /* Increased from 520px to 750px */
+    height: 450px; /* Increased from 320px to 450px */
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto; /* Center it */
 }
 
 .stereonet-visual img {
     width: 100%;
     height: 100%;
-    object-fit: contain;   /* shows full screenshot */
+    object-fit: contain;
     border-radius: 10px;
+}
+
+/* Make even larger on desktop */
+@media (min-width: 1200px) {
+    .stereonet-visual {
+        max-width: 850px;
+        height: 500px;
+        padding: 25px;
+    }
+}
+
+/* Slightly smaller on tablet */
+@media (max-width: 768px) {
+    .stereonet-visual {
+        max-width: 650px;
+        height: 400px;
+    }
 }
 
 .stereonet-circle {
@@ -1165,5 +1183,6 @@ p {
     opacity: 1;
     transform: translateY(0);
 }
+
 
 
