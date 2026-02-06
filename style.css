@@ -1050,6 +1050,12 @@ p {
     margin-bottom: 1.5rem;
 }
 
+.footer-logo-img {
+    height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
 .footer p {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.95rem;
@@ -1299,8 +1305,11 @@ p {
         text-align: center;
         align-items: center;
     }
+    
+    .footer-logo-img {
+        height: 35px;
+    }
 }
-
 /* Animation for scroll reveal */
 .fade-in {
     opacity: 0;
@@ -1328,3 +1337,4 @@ p {
 .screenshot-container {
     animation: fadeInUp 0.8s ease-out 0.3s both;
 }
+
