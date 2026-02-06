@@ -1043,6 +1043,7 @@ p {
     margin-right: 2rem;
 }
 
+/* Footer Logo */
 .footer-logo {
     display: flex;
     align-items: center;
@@ -1054,6 +1055,28 @@ p {
     height: 40px;
     width: auto;
     filter: brightness(0) invert(1);
+    flex-shrink: 0;
+}
+
+.footer-logo-text {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.logo-trademark {
+    font-size: 0.9rem;
+    vertical-align: super;
+    color: white;
+    line-height: 1;
 }
 
 .footer p {
@@ -1337,4 +1360,5 @@ p {
 .screenshot-container {
     animation: fadeInUp 0.8s ease-out 0.3s both;
 }
+
 
