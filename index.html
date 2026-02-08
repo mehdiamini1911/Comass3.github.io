@@ -483,6 +483,28 @@
                     </button>
                 </form>
                 <!-- END OF FORM -->
+                
+                <!-- ADD THIS SCRIPT RIGHT AFTER THE FORM (OPTION 1 FIX) -->
+                <script>
+                // Override any existing form handlers to ensure form submits to Formspree
+                document.addEventListener('DOMContentLoaded', function() {
+                    var form = document.getElementById('contact-form');
+                    
+                    if (form) {
+                        // Clone and replace the form to remove all existing event listeners
+                        var newForm = form.cloneNode(true);
+                        form.parentNode.replaceChild(newForm, form);
+                        
+                        // Add a clean submit handler that doesn't prevent default
+                        document.getElementById('contact-form').addEventListener('submit', function(e) {
+                            console.log('Form submitting to Formspree:', this.action);
+                            // Allow form to submit naturally - NO event.preventDefault()
+                        });
+                        
+                        console.log('Form reset and ready for Formspree submission');
+                    }
+                });
+                </script>
             </div>
         </div>
     </div>
@@ -557,6 +579,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
