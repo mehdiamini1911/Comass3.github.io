@@ -436,20 +436,13 @@
                 </div>
             </div>
             
-            <!-- RIGHT SIDE - BULLETPROOF FORM -->
+            <!-- RIGHT SIDE - FINAL CORRECTED FORM -->
             <div class="contact-form-container">
                 <h3>Send a Message</h3>
-                <!-- FORM THAT WILL DEFINITELY WORK -->
-                <form action="https://formspree.io/f/mreagenr" 
-                      method="POST" 
-                      id="contact-form" 
-                      class="contact-form"
-                      target="_blank"  <!-- Opens in new tab so you see it submit -->
-                      onsubmit="window.open('', 'formsubmission', 'width=400,height=400'); this.target='formsubmission';">
-                    
-                    <!-- Hidden Formspree fields -->
+                <!-- FORM WITH VALIDATION ERROR FIXED -->
+                <form action="https://formspree.io/f/mreagenr" method="POST" id="contact-form" class="contact-form">
+                    <!-- Hidden Formspree field - Subject only -->
                     <input type="hidden" name="_subject" value="New Compass 3 Contact Form Submission">
-                    <input type="hidden" name="_replyto" value="%email%">
                     
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Your Name" required>
@@ -484,78 +477,29 @@
                         </label>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary" onclick="this.form.submit(); return true;">
+                    <button type="submit" class="btn btn-primary">
                         <i class="fas fa-paper-plane"></i> Send Message
                     </button>
                 </form>
                 
-                <!-- NUCLEAR OPTION SCRIPT -->
+                <!-- Optional: Success message script -->
                 <script>
-                // Nuclear option - completely bypass any JavaScript interference
-                (function() {
-                    // Wait for page to load
-                    setTimeout(function() {
-                        var form = document.getElementById('contact-form');
-                        if (form) {
-                            // Create a brand new form
-                            var newForm = document.createElement('form');
-                            newForm.action = 'https://formspree.io/f/mreagenr';
-                            newForm.method = 'POST';
-                            newForm.id = 'contact-form';
-                            newForm.className = 'contact-form';
-                            newForm.innerHTML = `
-                                <input type="hidden" name="_subject" value="New Compass 3 Contact Form Submission">
-                                <input type="hidden" name="_replyto" value="%email%">
-                                
-                                <div class="form-group">
-                                    <input type="text" name="name" placeholder="Your Name" required>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <input type="email" name="email" placeholder="Email Address" required>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <select name="inquiry_type" required>
-                                        <option value="" disabled selected>Select Inquiry Type</option>
-                                        <option value="technical">Technical Support</option>
-                                        <option value="sales">Sales Inquiry</option>
-                                        <option value="academic">Academic Licensing</option>
-                                        <option value="training">Training Request</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                                </div>
-                                
-                                <input type="text" name="_gotcha" style="display:none">
-                                
-                                <div class="form-group">
-                                    <label class="checkbox">
-                                        <input type="checkbox" name="agree_terms" required>
-                                        <span>I agree to the terms and privacy policy</span>
-                                    </label>
-                                </div>
-                                
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fas fa-paper-plane"></i> Send Message
-                                </button>
-                            `;
-                            
-                            // Replace the old form
-                            form.parentNode.replaceChild(newForm, form);
-                            console.log('Form completely replaced - should work now!');
-                        }
-                    }, 1000);
-                })();
+                // Optional: Add a success message if needed
+                document.addEventListener('DOMContentLoaded', function() {
+                    var form = document.getElementById('contact-form');
+                    if (form) {
+                        form.addEventListener('submit', function() {
+                            // Form will submit to Formspree, then redirect to thank you page
+                            console.log('Form submitted to Formspree');
+                        });
+                    }
+                });
                 </script>
             </div>
         </div>
     </div>
 </section>
-
+    
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -625,6 +569,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
